@@ -1,0 +1,56 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box;
+    
+}
+*::after{
+    box-sizing: border-box;
+    
+}
+<!--文字换行-->
+#divHtml {
+word-break:
+break-all;
+}
+#divCircle {
+position: fixed;
+top:
+20px;
+right:
+20px;
+}
+*在css在div第一子元素里面加一个’1‘，before的内容就是1，
+相当于before就是一个span，content必须有，不然没有了
+css可以添加一个元素，由于不是真元素，所以称为伪元素。*
+#divCircle::before {
+content:'';
+display:block;
+position:absolute;
+}
+#divCircle::after {
+content:'';
+display:block;
+position:absolute;
+}
+
+@media(max-width: 500px){
+   *设置文案部分垂直方向显示滚动条，横向不显示，横向文字自动换行*
+    #divHtml{
+        height: 50vh;
+        overflow: hidden  auto;
+        word-break:break-all;
+    }
+    #divCircle{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    #divCircleWrapper{
+        height: 50vh;
+    }
+}
