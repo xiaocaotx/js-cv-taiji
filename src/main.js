@@ -65,7 +65,6 @@ function step(){
                      s2+= string[n]
                 }           
                 divHtml.innerHTML = s2;
-                // html.innerHTML =string.substring(0,n+1) ;
                 style.innerHTML =string.substring(0,n+1);
                 window.scrollTo(0, 99999);//网页端
                 divHtml.scroll(0,99999);//适配手机端
